@@ -25,3 +25,4 @@ Route.get('/', async ({ view }) => {
 })
 
 Route.resource('users', 'UsersController')
+Route.resource('messages', 'MessagesController')

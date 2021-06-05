@@ -1,7 +1,7 @@
 import { BaseModel } from '@ioc:Adonis/Lucid/Orm'
 
 export class ModelService {
-  private Model: typeof BaseModel
+  protected Model: typeof BaseModel
 
   constructor(model: any) {
     this.Model = model
@@ -12,7 +12,8 @@ export class ModelService {
   }
 
   public async findOne(id) {
-    return await this.Model.find(id)
+    const user = await this.Model.find(id)
+    return user
   }
 
   public async create(params) {
