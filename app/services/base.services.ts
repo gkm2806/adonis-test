@@ -15,7 +15,7 @@ export class ModelService {
     return await this.Model.find(id)
   }
 
-  public async reate(params) {
+  public async create(params) {
     return await this.Model.create(params)
   }
 
